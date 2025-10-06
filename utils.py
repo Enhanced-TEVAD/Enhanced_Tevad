@@ -38,7 +38,7 @@ class Visualizer(object):
 def process_feat(feat, length):
     new_feat = np.zeros((length, feat.shape[1])).astype(np.float32)
 
-    r = np.linspace(0, len(feat), length + 1, dtype=np.int)  # len=33,存入要取的frame index
+    r = np.linspace(0, len(feat), length + 1, dtype=int)  # len=33,存入要取的frame index
     for i in range(length):
         if r[i] != r[i + 1]:
             new_feat[i, :] = np.mean(feat[r[i]:r[i + 1], :], 0)  # r[i]:r[i+1]这些feat求平均
@@ -95,10 +95,22 @@ def modelsize(model, input, type_size=4):
           .format(model._get_name(), total_nums * type_size * 2 / 1000 / 1000))
 
 
-def save_best_record(test_info, file_path, metrics):
+# def save_best_record(test_info, file_path, metrics):
+#     fo = open(file_path, "w")
+#     fo.write("epoch: {}\n".format(test_info["epoch"][-1]))
+#     fo.write(metrics + ": " +str(test_info[metrics][-1]))
+#     fo.close()
+
+
+def save_best_record(test_info, file_path, mode):
+    # Create the output directory if it doesn't exist
+    output_dir = os.path.dirname(file_path)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # Rest of the function code...
     fo = open(file_path, "w")
-    fo.write("epoch: {}\n".format(test_info["epoch"][-1]))
-    fo.write(metrics + ": " +str(test_info[metrics][-1]))
+    fo.write(str(test_info))
     fo.close()
 
 

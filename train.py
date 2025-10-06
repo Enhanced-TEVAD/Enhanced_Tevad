@@ -4,8 +4,9 @@ import torch.nn.functional as F
 torch.set_default_tensor_type('torch.cuda.FloatTensor')
 from torch.nn import L1Loss
 from torch.nn import MSELoss
+from metrics_utils import MetricsCalculator
 
-
+import os 
 
 def sparsity(arr, batch_size, lamda2):  # arr1.shape=[1024, ], abn_scores
     loss = torch.mean(torch.norm(arr, dim=0))
@@ -96,6 +97,9 @@ def train(nloader, aloader, model, args, optimizer, viz, device):
         batch_size = args.batch_size
         ninput, ntext, nlabel = next(nloader)  # ninput.shape=[32,10,32,2048], nlabel.shape=[32,]
         ainput, atext, alabel = next(aloader)  # ainput.shape=[32,10,32,2048], alabel.shape=[32,]
+      
+      
+        
 
         input = torch.cat((ninput, ainput), 0).to(device)  # input.shape=[64,10,32,2048], 第一维是batch_size * 2, 第三维是snippets数
         text = torch.cat((ntext, atext), 0).to(device)

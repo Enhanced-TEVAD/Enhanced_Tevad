@@ -87,7 +87,7 @@ python main.py --dataset violence --feature-group both --fusion add --aggregate_
 ```
 UCSD-Ped2 dataset
 ```bash
-python main.py --dataset ped2 --feature-group both --fusion add --aggregate_text --max-epoch 10000 --extra_loss --batch-size 2
+python main.py --dataset ped2 --feature-group both --fusion add --aggregate_text --max-epoch 5000 --extra_loss --batch-size 2
 ```
 
 # Testing only (optional)
@@ -97,8 +97,20 @@ python main_test.py --dataset ucf --pretrained-ckpt ./ckpt/my_best/ucf-both-text
 ```
 ShanghaiTech dataset
 ```bash
+
+
+
+
+
+
 python main_test.py --dataset shanghai_v2 --feature-group both --fusion add --aggregate_text --pretrained-ckpt ./ckpt/my_best/shanghai_v2-both-text_agg-add-1-1-extra_loss-595-i3d-best.pkl --save_test_results
 ```
+
+
+
+
+
+
 XD-Violence dataset
 ```bash
 python main_test.py --dataset violence --feature-group both --fusion add --aggregate_text --feature-size 1024 --pretrained-ckpt ./ckpt/my_best/violence-both-text_agg-add-1-1-extra_loss-445-4869-BEST.pkl --save_test_results

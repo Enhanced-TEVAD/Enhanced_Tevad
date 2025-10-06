@@ -1,8 +1,0 @@
-visdom
-matplotlib
-sklearn
-tqdm
-pandas
-scipy
-opencv-python
-wordcloud
