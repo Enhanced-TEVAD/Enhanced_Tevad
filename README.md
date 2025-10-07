@@ -42,9 +42,9 @@ This repository contains significant improvements over the [original TEVAD imple
 |    |-- ucf-i3d.list
 |    |-- violence-i3d-test.list
 |    `-- violence-i3d.list
-|-- main.py  # main file, train and test
+|-- e_main.py  # main file, train and test
 |-- main_test.py 
-|-- model.py  
+|-- e_model.py  
 |-- option.py  
 |-- requirement.txt
 |-- results
@@ -62,7 +62,7 @@ This repository contains significant improvements over the [original TEVAD imple
 |       |-- Violence_five_crop_i3d_v1
 |       `-- sent_emb_n
 |-- test_10crop.py
-|-- train.py
+|-- e_train.py
 `-- utils.py
 ```
 
@@ -169,6 +169,7 @@ If you find this code useful for your research, please cite our paper:
 
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
+
 
 
 
