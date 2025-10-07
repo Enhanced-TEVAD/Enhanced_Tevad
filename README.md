@@ -2,12 +2,12 @@
 
 This is an **enhanced implementation** of the paper *TEVAD: Improved video anomaly detection with captions*, featuring an improved Multi-Task Network (MTN) architecture.
 
-> **Original Repository**: [TEVAD](https://github.com/WeihongM/TEVAD)  
+> **Original Repository**: [TEVAD](https://github.com/coranholmes/TEVAD/tree/main)  
 > **Original Paper**: Accepted by O-DRUM workshop @ CVPR 2023
 
 ## What's New in This Enhanced Version
 
-This repository contains significant improvements over the [original TEVAD implementation](https://github.com/WeihongM/TEVAD):
+This repository contains significant improvements over the [original TEVAD implementation](https://github.com/coranholmes/TEVAD/tree/main):
 
 - **Enhanced MTN Architecture**: Implemented an improved Multi-Task Network in `model.py` for better feature fusion and anomaly detection
 - **Modified Training Pipeline**: Updated `train.py` with optimized training procedures and loss functions
@@ -169,5 +169,6 @@ If you find this code useful for your research, please cite our paper:
 
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
+
 
 
