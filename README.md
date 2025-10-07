@@ -14,7 +14,7 @@ This repository contains significant improvements over the [original TEVAD imple
 - **Enhanced MTN Architecture**: Implemented an improved Multi-Task Network in `model.py` for better feature fusion and anomaly detection
 - **Modified Training Pipeline**: Updated `train.py` with optimized training procedures and loss functions
 - **Improved Main Script**: Enhanced `main.py` with better argument handling and workflow management
-- **Better Performance**: Achieved improved results across multiple benchmarks through architectural enhancements
+- **Better Performance**:Achieves superior results on benchmarks such as Ped2 dataset
 
 ## Preparations
 
@@ -70,10 +70,15 @@ This repository contains significant improvements over the [original TEVAD imple
 
 **To run the code, take UCF-Crime dataset as an example.**
 
-## Text features
+#Related Repositories 
+Extracts spatio-temporal video representations X3D [X3D_features](https://github.com/Guechmed/X3D_Feature_Extraction). 
+
+##TEVAD original features 
+
+### Text features
 Download from [LINK](https://1drv.ms/u/s!AlbDzA9D8VkhoO8dcvJNaAMkk5bbgA?e=Eh2LCB) (the file structure is the same as the tree map shown above) and put under `/save/Crime/snet_emb_n/` folder or generate the text features using this [repo](https://github.com/coranholmes/SwinBERT)
 
-## Visual features
+### Visual features
 1. You can download from [here](https://1drv.ms/u/s!AlbDzA9D8VkhoO8dcvJNaAMkk5bbgA?e=Eh2LCB) or generate the visual features using this [repo](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet).
 2. For UCF-Crime dataset, put the generated/downloaded features under `./save/Crime/UCF_ten_crop_i3d_v1` folder. Other datasets follow the same structure.
 3. For UCF-Crime dataset, change the path of visual features in `./list/ucf-i3d-test.list` and `list/ucf-i3d.list`. Other datasets follow the same structure.
@@ -171,6 +176,7 @@ If you find this code useful for your research, please cite our paper:
 
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
+
 
 
 
