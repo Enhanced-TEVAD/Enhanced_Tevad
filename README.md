@@ -89,19 +89,19 @@ Meanings of the arguments can be seen in `option.py`. To train the best model pr
 
 UCF-Crime dataset
 ```bash
-python main.py --dataset ucf --feature-group both --fusion concat --aggregate_text --extra_loss
+python e_main.py --dataset ucf --feature-group both --fusion concat --aggregate_text --extra_loss
 ```
 ShanghaiTech dataset
 ```bash
-python main.py --dataset shanghai_v2 --feature-group both --fusion add --aggregate_text --extra_loss
+python e_main.py --dataset shanghai_v2 --feature-group both --fusion add --aggregate_text --extra_loss
 ```
 XD-Violence dataset
 ```bash
-python main.py --dataset violence --feature-group both --fusion add --aggregate_text --extra_loss --feature-size 1024
+python e_main.py --dataset violence --feature-group both --fusion add --aggregate_text --extra_loss --feature-size 1024
 ```
 UCSD-Ped2 dataset
 ```bash
-python main.py --dataset ped2 --feature-group both --fusion add --aggregate_text --max-epoch 5000 --extra_loss --batch-size 2
+python e_main.py --dataset ped2 --feature-group both --fusion add --aggregate_text --max-epoch 5000 --extra_loss --batch-size 2
 ```
 
 # Testing only (optional)
@@ -169,6 +169,7 @@ If you find this code useful for your research, please cite our paper:
 
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
+
 
 
 
