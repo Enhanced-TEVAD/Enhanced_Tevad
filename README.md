@@ -7,13 +7,13 @@ This is an **enhanced implementation** of the paper *TEVAD: Improved video anoma
 > **Original Repository**: [TEVAD](https://github.com/coranholmes/TEVAD/tree/main)  
 > **Original Paper**: Accepted by O-DRUM workshop @ CVPR 2023
 
-## What's New in This Enhanced Version
+## Summary of Enhancements 
 
 This repository contains significant improvements over the [original TEVAD implementation](https://github.com/coranholmes/TEVAD/tree/main):
 
 - **Enhanced MTN Architecture**: Implemented an improved Multi-Task Network in `model.py` for better feature fusion and anomaly detection
 - **Modified Training Pipeline**: Updated `train.py` with optimized training procedures and loss functions
-- **Improved Main Script**: Enhanced `main.py` with better argument handling and workflow management
+- **Performance Gains** : Achieved 99.22% AUC on UCSD-Ped2 using 11× fewer epochs than the original (98.6% AUC)
 - **Better Performance**:Achieves superior results on benchmarks such as Ped2 dataset
 
 ## Preparations
@@ -142,13 +142,20 @@ python main_test.py --dataset ped2 --feature-group both --fusion add --aggregate
 ```
 
 
+##Results Summary 
+
+| Dataset   | Original TEVAD | Enhanced TEVAD | Epochs Used | Improvement |
+| --------- | -------------- | -------------- | ----------- | ----------- |
+| UCSD-Ped2 | 98.6 AUC       | **99.22 AUC**  | 11× fewer   | +0.62 AUC   |
+
+
 #Key Enhancements
 ##Enhanced Model Architecture (e_model.py)
-Improved Multi-Task Network (MTN) design for better multi-modal feature fusion
+-Transformer Encoder Blocks for long-range temporal modeling
 
-Enhanced attention mechanisms for better temporal modeling
+-SE module for adaptive channel attention
 
-Optimized feature extraction and aggregation modules
+-Improved multi-modal feature fusion
 
 ##Improved Training Pipeline (e_train.py)
 Refined loss functions for better convergence
@@ -177,6 +184,10 @@ If you find this code useful for your research, please cite our paper:
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
 
+
+#Maintainer 
+Guechaoui Mohamed 
+m.guechaoui@esi-sba.dz
 
 
 
