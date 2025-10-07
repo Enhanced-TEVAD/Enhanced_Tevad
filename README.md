@@ -3,6 +3,7 @@
 This is an **enhanced implementation** of the paper *TEVAD: Improved video anomaly detection with captions*, featuring an improved Multi-Task Network (MTN) architecture.
 
 > **Enhancement Report**: [E_TEVAD Report](https://drive.google.com/file/d/1c0nOuooNBN-sejW03wqAoqiXFEQTbIzt/view) 
+
 > **Original Repository**: [TEVAD](https://github.com/coranholmes/TEVAD/tree/main)  
 > **Original Paper**: Accepted by O-DRUM workshop @ CVPR 2023
 
@@ -170,6 +171,7 @@ If you find this code useful for your research, please cite our paper:
 
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
+
 
 
 
