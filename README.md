@@ -1,9 +1,23 @@
-This is the official implementation of paper *TEVAD: Improved video anomaly detection with captions*. 
+# TEVAD: Enhanced Implementation
 
-The paper is accepted by O-DRUM workshop @ CVPR 2023.
+This is an **enhanced implementation** of the paper *TEVAD: Improved video anomaly detection with captions*, featuring an improved Multi-Task Network (MTN) architecture.
 
-# Preparations
-## File structure
+> **Original Repository**: [TEVAD](https://github.com/WeihongM/TEVAD)  
+> **Original Paper**: Accepted by O-DRUM workshop @ CVPR 2023
+
+## What's New in This Enhanced Version
+
+This repository contains significant improvements over the [original TEVAD implementation](https://github.com/WeihongM/TEVAD):
+
+- **Enhanced MTN Architecture**: Implemented an improved Multi-Task Network in `model.py` for better feature fusion and anomaly detection
+- **Modified Training Pipeline**: Updated `train.py` with optimized training procedures and loss functions
+- **Improved Main Script**: Enhanced `main.py` with better argument handling and workflow management
+- **Better Performance**: Achieved improved results across multiple benchmarks through architectural enhancements
+
+## Preparations
+
+### File Structure
+
 ```
 .
 |-- README.md
@@ -120,6 +134,28 @@ UCSDped2 dataset
 python main_test.py --dataset ped2 --feature-group both --fusion add --aggregate_text --pretrained-ckpt ./ckpt/my_best/ped2-both-text_agg-add-1-1-extra_loss-755-4869-i3d.pkl --save_test_results
 ```
 
+
+#Key Enhancements
+##Enhanced Model Architecture (e_model.py)
+Improved Multi-Task Network (MTN) design for better multi-modal feature fusion
+
+Enhanced attention mechanisms for better temporal modeling
+
+Optimized feature extraction and aggregation modules
+
+##Improved Training Pipeline (e_train.py)
+Refined loss functions for better convergence
+
+Enhanced data augmentation strategies
+
+Improved optimization procedures
+
+##Enhanced Main Script (e_main.py)
+Better experiment management and logging
+
+Improved checkpoint saving and loading
+
+Enhanced configuration handling
 # Citation
 If you find this code useful for your research, please cite our paper:
 ```
@@ -133,4 +169,5 @@ If you find this code useful for your research, please cite our paper:
 
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
+
 
