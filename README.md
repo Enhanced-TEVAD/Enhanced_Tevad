@@ -71,9 +71,9 @@ This repository contains significant improvements over the [original TEVAD imple
 **To run the code, take UCF-Crime dataset as an example.**
 
 ## 🔗Related Repositories 
--This project depends on external repositories for feature extraction prior to anomaly detection.
+This project depends on external repositories for feature extraction prior to anomaly detection.
 
--Vextracts spatio-temporal video representations using the X3D model. [X3D_features](https://github.com/Guechmed/X3D_Feature_Extraction). 
+**Extracts spatio-temporal video representations** using the **X3D** model. [X3D_features](https://github.com/Guechmed/X3D_Feature_Extraction). 
 
 ## 🧠TEVAD original features 
 
@@ -190,6 +190,7 @@ This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the 
 # 👤Maintainer 
 Guechaoui Mohamed 
 📧 m.guechaoui@esi-sba.dz
+
 
 
 
