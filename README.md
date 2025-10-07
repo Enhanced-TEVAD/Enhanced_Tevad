@@ -70,10 +70,10 @@ This repository contains significant improvements over the [original TEVAD imple
 
 **To run the code, take UCF-Crime dataset as an example.**
 
-#Related Repositories 
+# Related Repositories 
 Extracts spatio-temporal video representations X3D [X3D_features](https://github.com/Guechmed/X3D_Feature_Extraction). 
 
-##TEVAD original features 
+## TEVAD original features 
 
 ### Text features
 Download from [LINK](https://1drv.ms/u/s!AlbDzA9D8VkhoO8dcvJNaAMkk5bbgA?e=Eh2LCB) (the file structure is the same as the tree map shown above) and put under `/save/Crime/snet_emb_n/` folder or generate the text features using this [repo](https://github.com/coranholmes/SwinBERT)
@@ -176,6 +176,7 @@ If you find this code useful for your research, please cite our paper:
 
 # Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
+
 
 
 
