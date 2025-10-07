@@ -72,6 +72,7 @@ This repository contains significant improvements over the [original TEVAD imple
 
 ## 🔗Related Repositories 
 -This project depends on external repositories for feature extraction prior to anomaly detection.
+
 -Vextracts spatio-temporal video representations using the X3D model. [X3D_features](https://github.com/Guechmed/X3D_Feature_Extraction). 
 
 ## 🧠TEVAD original features 
