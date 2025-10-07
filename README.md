@@ -2,12 +2,12 @@
 
 This is an **enhanced implementation** of the paper *TEVAD: Improved video anomaly detection with captions*, featuring an improved Multi-Task Network (MTN) architecture.
 
-> **Enhancement Report**: [E_TEVAD Report](https://drive.google.com/file/d/1c0nOuooNBN-sejW03wqAoqiXFEQTbIzt/view) 
+> **📄Enhancement Report**: [E_TEVAD Report](https://drive.google.com/file/d/1c0nOuooNBN-sejW03wqAoqiXFEQTbIzt/view) 
 
-> **Original Repository**: [TEVAD](https://github.com/coranholmes/TEVAD/tree/main)  
-> **Original Paper**: Accepted by O-DRUM workshop @ CVPR 2023
+> **🧩Original Repository**: [TEVAD](https://github.com/coranholmes/TEVAD/tree/main)  
+> **📚Original Paper**: Accepted by O-DRUM workshop @ CVPR 2023
 
-## Summary of Enhancements 
+## 🚀Summary of Enhancements 
 
 This repository contains significant improvements over the [original TEVAD implementation](https://github.com/coranholmes/TEVAD/tree/main):
 
@@ -18,7 +18,7 @@ This repository contains significant improvements over the [original TEVAD imple
 
 ## Preparations
 
-### File Structure
+### 📁File Structure
 
 ```
 .
@@ -70,10 +70,10 @@ This repository contains significant improvements over the [original TEVAD imple
 
 **To run the code, take UCF-Crime dataset as an example.**
 
-# Related Repositories 
-Extracts spatio-temporal video representations X3D [X3D_features](https://github.com/Guechmed/X3D_Feature_Extraction). 
+## 🔗Related Repositories 
+Visual Features (X3D) [X3D_features](https://github.com/Guechmed/X3D_Feature_Extraction). 
 
-## TEVAD original features 
+## 🧠TEVAD original features 
 
 ### Text features
 Download from [LINK](https://1drv.ms/u/s!AlbDzA9D8VkhoO8dcvJNaAMkk5bbgA?e=Eh2LCB) (the file structure is the same as the tree map shown above) and put under `/save/Crime/snet_emb_n/` folder or generate the text features using this [repo](https://github.com/coranholmes/SwinBERT)
@@ -83,7 +83,7 @@ Download from [LINK](https://1drv.ms/u/s!AlbDzA9D8VkhoO8dcvJNaAMkk5bbgA?e=Eh2LCB
 2. For UCF-Crime dataset, put the generated/downloaded features under `./save/Crime/UCF_ten_crop_i3d_v1` folder. Other datasets follow the same structure.
 3. For UCF-Crime dataset, change the path of visual features in `./list/ucf-i3d-test.list` and `list/ucf-i3d.list`. Other datasets follow the same structure.
 
-## Install requirements
+## ⚙️Install requirements
 Run `pip install -r requirement.txt` to install the requirements.
 
 ## Run visdom
@@ -91,7 +91,7 @@ Run `pip install -r requirement.txt` to install the requirements.
 
 Open a separate terminal and run `visdom` after installing the requirements before running the following commands.
 
-# Training + Testing
+# 🏋️‍♂️Training + Testing
 Meanings of the arguments can be seen in `option.py`. To train the best model presented in the paper, use the following settings:
 
 UCF-Crime dataset
@@ -111,7 +111,7 @@ UCSD-Ped2 dataset
 python e_main.py --dataset ped2 --feature-group both --fusion add --aggregate_text --max-epoch 5000 --extra_loss --batch-size 2
 ```
 
-# Testing only (optional)
+# 🧪Testing only (optional)
 UCF-Crime dataset
 ```bash
 python main_test.py --dataset ucf --pretrained-ckpt ./ckpt/my_best/ucf-both-text_agg-concat-0.0001-extra_loss-620-4869-.pkl --feature-group both --fusion concat --aggregate_text --save_test_results
@@ -142,35 +142,35 @@ python main_test.py --dataset ped2 --feature-group both --fusion add --aggregate
 ```
 
 
-##Results Summary 
+## 📊Results Summary 
 
 | Dataset   | Original TEVAD | Enhanced TEVAD | Epochs Used | Improvement |
 | --------- | -------------- | -------------- | ----------- | ----------- |
 | UCSD-Ped2 | 98.6 AUC       | **99.22 AUC**  | 11× fewer   | +0.62 AUC   |
 
 
-#Key Enhancements
-##Enhanced Model Architecture (e_model.py)
+# 🧩Key Enhancements
+## Enhanced Model Architecture (e_model.py)
 -Transformer Encoder Blocks for long-range temporal modeling
 
 -SE module for adaptive channel attention
 
 -Improved multi-modal feature fusion
 
-##Improved Training Pipeline (e_train.py)
+### Improved Training Pipeline (e_train.py)
 Refined loss functions for better convergence
 
 Enhanced data augmentation strategies
 
 Improved optimization procedures
 
-##Enhanced Main Script (e_main.py)
+### Enhanced Main Script (e_main.py)
 Better experiment management and logging
 
 Improved checkpoint saving and loading
 
 Enhanced configuration handling
-# Citation
+# 🧾Citation
 If you find this code useful for your research, please cite our paper:
 ```
 @inproceedings{chen2023TEVAD,
@@ -181,13 +181,14 @@ If you find this code useful for your research, please cite our paper:
 }
 ```
 
-# Acknowledgements
+# 🙏Acknowledgements
 This code is based on [RTFM](https://github.com/tianyu0207/RTFM/). We thank the authors for their great work.
 
 
-#Maintainer 
+# 👤Maintainer 
 Guechaoui Mohamed 
-m.guechaoui@esi-sba.dz
+📧 m.guechaoui@esi-sba.dz
+
 
 
 
